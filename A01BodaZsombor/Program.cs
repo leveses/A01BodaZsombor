@@ -13,7 +13,20 @@ namespace A01BodaZsombor
         static void Main(string[] args)
         {
             Beolvasas();
-            
+            Console.WriteLine("A maximum: {0}", Maximumertek());
+        }
+
+        private static int Maximumertek(int m)
+        {
+            m = 1;
+            for (int i = 2; i < tomb.Length; i++)
+            {
+                if (tomb[i]<tomb[m])
+                {
+                    m = i;
+                }
+            }
+            return m;
         }
 
         private static void Beolvasas()
