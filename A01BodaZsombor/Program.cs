@@ -14,6 +14,22 @@ namespace A01BodaZsombor
         {
             Beolvasas();
             Console.WriteLine("A maximum: {0}", Maximumertek());
+            Egyediek();
+        }
+        private static void Egyediek()
+        {
+            int x = 0;
+            for (int i = 0; i < tomb.Length; i++)
+            {
+                if (tomb[i] % 5 == 0 && tomb[i] % 7 == 0)
+                {
+                    x++;
+                    StreamWriter ir = new StreamWriter("egyediek.txt", true);
+                    Console.Write(ir);
+                }
+                Console.WriteLine("5 és 7 oszthatóak száma: {0}", x);
+            }
+
         }
 
         private static int Maximumertek(int m)
